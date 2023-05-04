@@ -1,7 +1,7 @@
 # 미로봇 시리얼 통신 설정
 # 예시
 # PORTNAME :str = "COM1"
-PORTNAME :str = "COM5"
+PORTNAME :str = "?"
 
 # 로봇암 제어 키 설정
 # String 문자열 형태로 입력
@@ -13,40 +13,41 @@ KEY_EXAMPLE = ["a", "b", "c", "d", "down", "up", "left", "right", "space", "ctrl
 # KUP_1, KDOWN_1 = "a", "d"
 
 ### 키 설정
-# KUP_1, KDOWN_1 = "?", "?"
+KUP_1, KDOWN_1 = "?", "?"
 
-# KUP_2, KDOWN_2 = "?", "?"
+KUP_2, KDOWN_2 = "?", "?"
 
-# KUP_3, KDOWN_3 = "?", "?"
+KUP_3, KDOWN_3 = "?", "?"
 
-# KUP_4, KDOWN_4 = "?", "?"
+KUP_4, KDOWN_4 = "?", "?"
 
-# KUP_5, KDOWN_5 = "?", "?"
+KUP_5, KDOWN_5 = "?", "?"
 
-# KUP_6, KDOWN_6 = "?", "?"
+KUP_6, KDOWN_6 = "?", "?"
 
-# ENDEF_1, ENDEF_2 , ENDEF_3= "?", "?", "?"
-KUP_1, KDOWN_1 = "a", "d"
+ENDEF_1, ENDEF_2 , ENDEF_3= "?", "?", "?"
 
-KUP_2, KDOWN_2 = "s", "w"
+# KUP_1, KDOWN_1 = "a", "d"
 
-KUP_3, KDOWN_3 = "k", "i" 
+# KUP_2, KDOWN_2 = "s", "w"
 
-KUP_4, KDOWN_4 = "j", "l" 
+# KUP_3, KDOWN_3 = "k", "i" 
 
-KUP_5, KDOWN_5 = "down", "up"
+# KUP_4, KDOWN_4 = "j", "l" 
 
-KUP_6, KDOWN_6 = "left", "right"
+# KUP_5, KDOWN_5 = "down", "up"
 
-ENDEF_1, ENDEF_2 , ENDEF_3= "space", "shift", "alt"
+# KUP_6, KDOWN_6 = "left", "right"
+
+# ENDEF_1, ENDEF_2 , ENDEF_3= "space", "shift", "alt"
 ### 
 
 ### 로봇암 속도 설정
 # 예시
 # JOINT_ANGLE = 20
 # SPEED = 2000
-JOINT_ANGLE = 3
-SPEED = 500
+JOINT_ANGLE = 0
+SPEED = 0
 # 최대 각도 설정
 
 # 아래 코드는 건드릴 필요 X

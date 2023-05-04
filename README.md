@@ -1,4 +1,14 @@
 # 미로봇 환경설정
+
+- github 주소 : https://github.com/BodleHG/Engineering_Design_RobotArm
+
+- code - Download ZIP 혹은 git clone으로 실습파일 다운로드
+  - code - Download ZIP
+    - ![image](https://user-images.githubusercontent.com/89232601/236130658-419839f3-a6d7-4181-bfc0-5ce3517304b2.png)
+  - cmd 실행 후 ```git clone https://github.com/BodleHG/Engineering_Design_RobotArm.git``` 명령어 입력
+    - ![image](https://user-images.githubusercontent.com/89232601/236131027-9c7eda36-227a-46f3-8dc9-52afb1168ec8.png)
+    - 현재 위치에 파일을 저장하기 때문에 > 앞쪽의 경로를 잘 알아둬야 함
+
 ## 1. 미로봇 드라이버 설치
 - ```mirobot driver\CH340 driver (USB serial port driver) _XP_WIN7_WIN8\DRVSETUP64``` 폴더 안의 ```SETUP.EXE``` 파일 실행
   - ![image](https://user-images.githubusercontent.com/89232601/236123192-c6828d1d-dc30-4cd1-b592-8f275fd94d5c.png)
@@ -37,8 +47,8 @@
 
 3. 평가지 작성이 끝나면, 조교에게 제출
 
-**제한 시간 : 1시간 30분**
+**- 제한 시간 : 1시간 30분**
 
-**총 20점(참여도(10) / 창의성(4) / 실현 가능성(3) / 효율성(3), 조별점수), 참여도가 낮다고 판단시 조교가 임의로 질문 혹은 발표를 시킬 수 있음**
+**- 총 20점(참여도(10) / 창의성(4) / 실현 가능성(3) / 효율성(3), 조별점수), 참여도가 낮다고 판단시 조교가 임의로 질문 혹은 발표를 시킬 수 있음**
 
-**역할 분배 자유, 구글링, chatgpt 사용 가능**
+**- 역할 분배 자유, 구글링, chatgpt 사용 가능**
