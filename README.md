@@ -1,43 +1,44 @@
-git clone시 터미널에서 `git config --system core.longpaths true` 명령어 입력 후 git clone을 해야 함.
+# 미로봇 환경설정
+## 1. 미로봇 드라이버 설치
+- ```mirobot driver\CH340 driver (USB serial port driver) _XP_WIN7_WIN8\DRVSETUP64``` 폴더 안의 ```SETUP.EXE``` 파일 실행
+  - ![image](https://user-images.githubusercontent.com/89232601/236123192-c6828d1d-dc30-4cd1-b592-8f275fd94d5c.png)
 
+- Install 버튼 클릭 후 설치 완료 시 종료
+  - ![image](https://user-images.githubusercontent.com/89232601/236123304-fd205aaa-5d88-4396-abed-ba4ed4a823a7.png)
 
-# 한밭대학교 컴퓨터공학과 RCT팀
+- 윈도우 검색에서 ```장치 관리자``` 검색 후 실행
+  - ![image](https://user-images.githubusercontent.com/89232601/236123811-b8ededc6-8bdd-411f-9054-c36f54ecd82c.png)
 
-**팀 구성**
-- 20181586 김진우
-- 20181612 김자용
-- 20181588 김현기
+- 포트(COM & LPT) 항목에서 CH340에 해당하는 포트번호 확인(미로봇이 켜져있어야 함, 해당 이미지의 경우 COM5)
+  - ![image](https://user-images.githubusercontent.com/89232601/236123998-5b1ee528-8af6-4d84-875f-59f1cf21e22b.png)
 
-## <u>Teamate</u> Project Background
-- ### 필요성
-  - 로봇 기술의 발전에 따라 다양한 분야에서의 로봇 산업 발전에 따른 자율화 및 원격제어 로봇 기술 발전의 가속화
-  - 현장에서 인간을 대체할 로봇의 역할 증가에 따른 원격 로봇 제어 시스템의 필요성
-- ### 기존 해결책의 문제점
-  - 로봇의 완전한 자율화의 한계
-    - 실제 작업 환경의 불확실성, 변수 통제의 어려움 등 로봇의 완전한 자율화에 한계점 존재
-    - 단순 작업이 아닌 위험 현장, 정밀한 조작을 요구하는 작업 현장에서 인간의 개입 없이 로봇이 스스로 판단하고 수행하는 일은 현재 기술로 무리
+- 깃허브 파일을 다운받은 폴더로 이동 후, 주소창에 cmd 입력
+  - ![image](https://user-images.githubusercontent.com/89232601/236124510-a87ee886-bd1a-4702-a214-f755f677c335.png)
 
-  - 현재 원격 조종 기술의 문제점
-    - 180도 카메라 활용으로 인한 시야각의 한계 → 사각지대 존재로 인한 인식의 어려움
-    - 카메라 및 센서 개수의 수 증가 → 사용자에게 직관적이지 않은 조종 환경, 비용과 유지 보수에서 문제 발생
-    - 시간지연에 의한 원격조종의 어려움 → 네트워크 지연의 문제 발생
+- 터미널이 실행되면 다음 명령어 순차적으로 입력
+  1. (가상환경 생성) ```python -m venv venv ```
+     - ![image](https://user-images.githubusercontent.com/89232601/236124694-1cfa44f8-c072-47d7-9663-5e0830699b14.png)
+  2. (가상환경 실행) ```venv\Scripts\activate```
+     - ![image](https://user-images.githubusercontent.com/89232601/236124806-3c7ccf6c-c525-46ff-aed9-d74f67de258b.png)
+  3. (코드 실행에 필요한 패키지 설치) ```pip install -r requirements.txt```
+      - ![image](https://user-images.githubusercontent.com/89232601/236124982-2fa30b90-9c38-4bbf-8c1b-8dd1c94ad4c3.png)
 
-## System Design
-  - ### System Requirements
-    - 360 device
-      - RICOH THETA V
+  4. (미로봇 코드 폴더로 이동) ```cd mirobotApi```
+      - ![image](https://user-images.githubusercontent.com/89232601/236125104-0dae8d40-d429-4150-9d2a-27d9801fb586.png)
 
-    - WebRTC
-    - VR Environment
-    - Manipulator
-    
-## Case Study
-  - ### Description
-  
-  
-## Conclusion
-  - ### 인간의 시야와 흡사한 조종 환경을 구사하여 작업자에게 몰입감, 실제와 같은 경험 제공
-  - ### 적은 카메라로 보다 많은 영상 데이터 확보 가능 → 사각지대의 한계 개선
-  
-## Project Outcome
-- ### 20XX 년 OO학술대회 
+  5. (미로봇 제어 코드 실행) ```python run.py keyboard```
+
+- - -
+# TODO
+1. mirobotApi 폴더 내의 config.py 파일 수정(메모장, vscode 활용)
+   - config.py 파일을 수정하지 않고 실행 시 오류 발생 
+
+2. 프로그램을 통해 미로봇을 제어해보며, 어떤 파라미터 값이 제어 시 사용자 입장에서 접근성이 가장 높은지 조원과 토의하며 설정(코드 종료 방법 : 1 입력, 강제종료 : Ctrl + c)
+
+3. 평가지 작성이 끝나면, 조교에게 제출
+
+**제한 시간 : 1시간 30분**
+
+**총 20점(참여도(10) / 창의성(4) / 실현 가능성(3) / 효율성(3), 조별점수), 참여도가 낮다고 판단시 조교가 임의로 질문 혹은 발표를 시킬 수 있음**
+
+**역할 분배 자유, 구글링, chatgpt 사용 가능**
