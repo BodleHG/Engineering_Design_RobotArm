@@ -11,19 +11,28 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     
-    print("Instantiate the Mirobot Arm instance")
+    print("미로봇 상태를 초기화합니다...")
     arm = WlkataMirobot(portname=PORTNAME)
     
+    print(f"포트 연결이 감지되었습니다. 현재 포트 : {PORTNAME}")
+    
     # Mirobot Arm Multi-axis executing
-    print("Homing start")
+    print("Mirobot Homing...")
 
     arm.home()
 
-    print("Homing finish")    
+    print("Homing finish")
+        
+    print("이펙터가 감지되었습니다. 현재 이펙터 : FLEXIBLE CLAW")
     arm.set_tool_type(WlkataMirobotTool.FLEXIBLE_CLAW)
+    arm.pump_suction()
+    time.sleep(1)
+    arm.pump_blowing()
+    time.sleep(1)
+    arm.pump_off()
 
     if args.mode == "keyboard":
-        print("Keyboard Control Mode")
+        print("현재 키보드 제어 모드입니다. 키보드를 통해 제어해주세요.")
         # Keymanager(arm)._setJointAngle()
         asyncio.run(Keymanager(arm)._setAxis())
         

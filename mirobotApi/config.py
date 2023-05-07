@@ -1,12 +1,12 @@
 # 미로봇 시리얼 통신 설정
 # 예시
-# PORTNAME :str = "COM1"
+# PORTNAME :str = "COM0"
 PORTNAME :str = "?"
 
 # 로봇암 제어 키 설정
 # String 문자열 형태로 입력
 
-# 예시 리스트의 키 이외의 키 적용 가능
+# 예시 리스트의 키 이외의 키도 적용 가능
 KEY_EXAMPLE = ["a", "b", "c", "d", "down", "up", "left", "right", "space", "ctrl", "alt"]
 
 # 예시
@@ -26,20 +26,6 @@ KUP_5, KDOWN_5 = "?", "?"
 KUP_6, KDOWN_6 = "?", "?"
 
 ENDEF_1, ENDEF_2 , ENDEF_3= "?", "?", "?"
-
-# KUP_1, KDOWN_1 = "a", "d"
-
-# KUP_2, KDOWN_2 = "s", "w"
-
-# KUP_3, KDOWN_3 = "k", "i" 
-
-# KUP_4, KDOWN_4 = "j", "l" 
-
-# KUP_5, KDOWN_5 = "down", "up"
-
-# KUP_6, KDOWN_6 = "left", "right"
-
-# ENDEF_1, ENDEF_2 , ENDEF_3= "space", "shift", "alt"
 ### 
 
 ### 로봇암 속도 설정
